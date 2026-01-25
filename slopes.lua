@@ -86,6 +86,15 @@ minetest.register_node("mywoodslopes:"..mat.."_ocorner", {
 	selection_box = ocorner_cbox
 })
 
+
+if core.get_modpath("lucky_block") then
+	lucky_block:add_blocks({
+		{"dro", {"mywoodslopes:"..mat.."_slope"}, 24},
+		{"dro", {"mywoodslopes:"..mat.."_icorner"}, 24},
+		{"dro", {"mywoodslopes:"..mat.."_ocorner"}, 24},
+	})
+end
+
 --rotated---------------------------------------------------------------
 --slope
 minetest.register_node("mywoodslopes:"..mat.."_slope_r", {
